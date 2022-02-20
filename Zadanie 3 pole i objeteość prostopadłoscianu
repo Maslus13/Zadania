@@ -1,0 +1,24 @@
+#include <iostream> //biblioteka standardowa C++
+#include <cstdio> //biblioteka potrzebna do funkcji getchar()
+#include <cstdlib> //biblioteka potrzebna do funkcji exit()
+using namespace std; //standardowa przestrzen nazw std
+ 
+int a,b,H; //deklaracja zmiennych
+int main(){ //funkcja glowna
+ 
+    cout << "Pole prostopadloscianu: " << endl; //strumien wyjscia
+    cout << "Podaj dlugosc krawedzi a: "; cin >> a; //zapytaj i wczytaj do zmiennej odpowiedz
+    cout << "Podaj dlugosc krawedzi b: "; cin >> b; //jw
+    cout << "Podaj wysokosc H: "; cin >> H; //jw
+ 
+    if(a<0||b<0||H<0) { //if sprawdzajacy poprawnosc danych
+        cout << "Bledna wartosc: przynajmniej jedna zmienna jest ujema " << endl; //strumien wyjscia
+        exit(0); //zamkniecie programu z kodem 0
+    }
+ 
+    cout << "Objetosc prostopadloscianu wynosi = " << a*b*H << " cm^3" << endl; //strumien wyjscia
+    cout << "Pole powierzchni prostopadloscianu wynosi = " << (2*a*b)+(2*b*H)+(2*a*H) << " cm^2" << endl; //jw
+    getchar();
+    getchar();
+    return 0;
+}
